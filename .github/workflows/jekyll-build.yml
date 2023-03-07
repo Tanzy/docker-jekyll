@@ -1,16 +1,9 @@
 name: Build Jekyll Image
 
 on:
-  schedule:
-    - cron: "0 10 * * *"
   push:
-    branches:
-      - "**"
     tags:
       - "v*.*.*"
-  pull_request:
-    branches:
-      - "main"
 
 jobs:
   docker:
