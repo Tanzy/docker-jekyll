@@ -5,7 +5,7 @@
 #FROM alpine:latest
 # At a minimum, use Ruby 2.5 or later
 #FROM ruby:2.7-alpine3.16
-FROM ruby:alpine3.17
+FROM ruby:2.7.1-alpine
 
 # Add Jekyll dependencies to Alpine
 RUN apk update
@@ -23,4 +23,3 @@ VOLUME [ "/site", "/usr/local/bundle" ]
 WORKDIR /site
 
 CMD ["jekyll", "--help"]
-
